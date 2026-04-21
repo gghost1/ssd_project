@@ -1,0 +1,9 @@
+.git
+.cursor
+agent-tools
+agent-transcripts
+artifacts
+build
+fuzz/crashes
+openssl-1.0.1f
+openssl-1.0.1f.tar.gz

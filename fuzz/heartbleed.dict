@@ -1,0 +1,7 @@
+"heartbeat_record"="\x18\x03\x02\x00\x03\x01\x40\x00"
+"heartbeat_type"="\x18"
+"tls10"="\x03\x01"
+"tls11"="\x03\x02"
+"tls12"="\x03\x03"
+"handshake"="\x16\x03"
+"heartbeat_request"="\x01"
