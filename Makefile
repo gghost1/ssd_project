@@ -29,8 +29,10 @@ $(FUZZER): fuzz/heartbleed_fuzz.cc fuzz/server.pem fuzz/server.key $(OPENSSL_DIR
 		-fsanitize=address,fuzzer \
 		-I$(OPENSSL_DIR)/include \
 		fuzz/heartbleed_fuzz.cc \
+		-Wl,--start-group \
 		$(OPENSSL_DIR)/libssl.a \
 		$(OPENSSL_DIR)/libcrypto.a \
+		-Wl,--end-group \
 		-ldl -lpthread -o $(FUZZER)
 	cp fuzz/server.pem $(BUILD_DIR)/server.pem
 	cp fuzz/server.key $(BUILD_DIR)/server.key
