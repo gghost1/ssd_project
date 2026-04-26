@@ -1,8 +1,8 @@
 build/
 dist/
-artifacts/
+# artifacts/
 openssl-1.0.1f/
 openssl-1.0.1f.tar.gz
 fuzz/corpus/generated/
 fuzz/crashes/
-*.log
+# *.log
