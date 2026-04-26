@@ -8,7 +8,8 @@ CRASH_DIR="${FUZZ_CRASH_DIR:-${ROOT_DIR}/fuzz/crashes}"
 CRASH_FILE="${1:-}"
 
 if [[ -z "${CRASH_FILE}" ]]; then
-  CRASH_FILE="$(ls -1 "${CRASH_DIR}"/crash-* 2>/dev/null | head -n 1 || true)"
+  # Newest crash by mtime (not lexicographic name order).
+  CRASH_FILE="$(ls -t "${CRASH_DIR}"/crash-* 2>/dev/null | head -n 1 || true)"
 fi
 
 if [[ -z "${CRASH_FILE}" || ! -f "${CRASH_FILE}" ]]; then
